@@ -1,0 +1,16 @@
+{
+  "tasks": [
+     "Pay bills",
+	"Meet George",
+	"By eggs",
+	"Read a book",
+	"Organize office"
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ]
+}

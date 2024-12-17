@@ -1,0 +1,45 @@
+
+ .wrap {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	padding: 10px;
+ }
+ .head {
+	text-align: center;
+ }
+ .date{
+	text-align: center;
+ }
+  .ul {
+	margin-right: 30px;
+	margin-left: 35px;
+	margin-top: 35px;
+	margin-bottom: 10px;
+	padding: 7px;
+	/* width: 77%; */
+	/* border-color:blue;
+	border-width: 7px; */
+
+  }
+  .uncheck {
+	background-color: rgb(116, 237, 116);
+	font-size: 24px;
+	margin: 10px;
+	min-height: 10px;
+	border: 2px solid hsl(var(--accent-color-hue), var(--accent-color-saturation), 92%);
+	border-radius: 15px;
+	padding: 15px;
+  }
+  .checked {
+	background-color: rgb(238, 98, 98);
+	font-size: 22px;
+	text-decoration: line-through;
+	margin: 10px;
+	min-height: 10px;
+	border: 2px solid hsl(var(--accent-color-hue), var(--accent-color-saturation), 92%);
+	border-radius: 15px;
+	padding: 15px;
+  }
+
