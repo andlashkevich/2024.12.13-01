@@ -8,15 +8,20 @@ export function Task2() {
 	const [outTask, setOutTask] = useState([]);
 	const [error, setError] = useState(null);
 	const [block, setBlock] = useState(false);
-	// const refreshFlag = () => setRefresh(!refresh)
+	const [id, setId] = useState("");
 
 	const inputChange = ({ target }) => {
 		let error = null;
 		setInTask(target.value);
 		if (outTask.find((it) => it.task === target.value))
 			error = "Такая задача уже существует";
-		if (target.value.length > 30) error = "Слишком длинная задача";
+		if (target.value.length > 100) error = "Слишком длинная задача";
 		setError(error);
+	};
+	const setClear = () => {
+		setInTask("");
+		setBlock(false);
+		setError(null);
 	};
 	useEffect(() => {
 		fetch("http://localhost:3003/tasks")
@@ -24,7 +29,7 @@ export function Task2() {
 			.then((dt) => {
 				setOutTask(dt);
 			});
-	}, [block]);
+	}, [block, inTask]);
 
 	const createTask = () => {
 		setBlock(true);
@@ -62,36 +67,57 @@ export function Task2() {
 		);
 	};
 
-	const changeTask = (e) => {
-		e.preventDefault();
-		console.log(e);
+	const fixTask = (e) => {
+		setInTask(e.target.innerText);
+		let id = outTask.find((it) => {
+			if (it.task === e.target.innerText) return it;
+		}).id;
+		setId(id);
+	};
+
+	const updTask = () => {
+		fetch(`http://localhost:3003/tasks/${id}`, {
+			method: "PUT",
+			body: JSON.stringify({ task: inTask }),
+			headers: {
+				"content-Type": "application/json; charset=utf-8",
+			},
+		})
+			.then((rsp) => rsp.json())
+			.then((dt) => console.log(dt))
+			.catch((error) => console.log(error))
+			.finally(() => {
+				setInTask("");
+				setBlock(false);
+			});
 	};
 
 	const findTask = () => {
-		inTask
-			? outTask.find((it) => {
-					it.task.includes(inTask);
-					let m = `Задача № ${it.task.id + 1} соответсвует запросу`;
-					return m;
-				})
-			: setError("Поиск невозможен");
+		let a = [];
+		a = outTask.filter((it) => it.task.includes(inTask));
+		inTask && a.length > 0
+			? setOutTask(a)
+			: setError("Поиск не дал результатов");
 	};
 
 	return (
-		<form className={styles.wrap}>
+		<div className={styles.wrap}>
 			<h1 className={styles.head}> Задачи на неделю</h1>
-			{error ? <div className={styles.error}>{error}</div> : null}
-			<textarea
-				name="newTask"
-				value={inTask}
-				onChange={inputChange}
-				// onBlur={emailBlur}
-				className={styles.input}
-				placeholder="Введите новую задачу или нажмите на существующую для внесения изменений"
-				autoFocus={true}
-				required={true}
-				autoComplete="on"
-			></textarea>
+			<div className={styles.field}>
+				{error ? <div className={styles.error}>{error}</div> : null}
+				<textarea
+					name="newTask"
+					value={inTask}
+					onChange={inputChange}
+					className={styles.input}
+					placeholder="1.Введите новую задачу или словосочетание для поиска существующей. 2.Для исправления имеющейся задачи нажмите на неё и внесите изменение в этом поле. 3.Ввод пустого значения или задачи длинной более 100 знаков неприемлем. 4.Если задача уже есть в списке, ввести её еще раз не получится."
+					autoFocus={true}
+					autoComplete="on"
+				></textarea>
+				<button onClick={setClear} className={styles.xBut}>
+					X
+				</button>
+			</div>
 			<div className={styles.buttons}>
 				<button
 					disabled={block}
@@ -103,7 +129,7 @@ export function Task2() {
 				<button
 					disabled={block}
 					onClick={sortTask}
-					className={styles.oButton}
+					className={styles.sButton}
 				>
 					Упорядочить
 				</button>
@@ -114,17 +140,19 @@ export function Task2() {
 				>
 					Найти
 				</button>
+				<button
+					disabled={block}
+					onClick={updTask}
+					className={styles.uButton}
+				>
+					Изменить
+				</button>
 			</div>
 			<ol className={styles.ol}>
 				{outTask.map((it, id) => {
 					return (
 						<div className={styles.tasks} key={id}>
-							<li className={styles.uncheck}>
-								<input
-									onChange={changeTask}
-									className={styles.checkbox}
-									type={"checkbox"}
-								></input>
+							<li onClick={fixTask} className={styles.uncheck}>
 								{it.task}
 							</li>
 							<button
@@ -138,6 +166,6 @@ export function Task2() {
 					);
 				})}
 			</ol>
-		</form>
+		</div>
 	);
 }

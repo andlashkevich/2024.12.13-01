@@ -1,19 +1,15 @@
 {
   "tasks": [
     {
-      "id": "2",
-      "task": "Pay bills"
-    },
-    {
-      "id": "3",
-      "task": "Meet George"
+      "task": "MEET ANDREY",
+      "id": "3"
     },
     {
       "task": "WORKING EVERYDAY",
       "id": "yVVjsLE"
     },
     {
-      "task": "JUMPING FAST",
+      "task": "SWIMMING FAST",
       "id": "QmGlt9I"
     },
     {
@@ -26,15 +22,7 @@
     },
     {
       "task": "CHANGE YOUR LIFE",
-      "id": "9nec0-v"
-    },
-    {
-      "task": "CHANGE YOUR LIFE",
       "id": "YdyDxeo"
-    },
-    {
-      "task": "RUNNING AT MORNING",
-      "id": "b1kGHSI"
     },
     {
       "task": "RUNNING AT MORNING",
@@ -51,6 +39,10 @@
     {
       "task": "GO HOME",
       "id": "FQTFtX7"
+    },
+    {
+      "task": "BUY AIRPLANE",
+      "id": "OkhQGi4"
     }
   ],
   "comments": [
