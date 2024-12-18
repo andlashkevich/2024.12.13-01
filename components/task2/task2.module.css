@@ -24,6 +24,12 @@
 	margin: 10px;
 	padding: 10px;
 }
+.error {
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color:rgb(238, 98, 98);
+}
 .tasks {
 	display: flex;
 	width: 100%;
