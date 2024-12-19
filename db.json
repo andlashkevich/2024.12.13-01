@@ -38,17 +38,31 @@
     }
   ],
   "firebaseTasks": {
-	"001":{"task": "buy milk"},
-	"002":{"task": "catch pig"},
-	"003":{"task": "break smartphone"},
-	"004":{"task": "sell fish"},
-	"005":{"task": "make big fire"},
-	"006":{"task": "write a poem"},
-	"007":{"task": "wake up president"}
-  },
-   "comments":  {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+    "001": {
+      "task": "buy milk"
+    },
+    "002": {
+      "task": "catch pig"
+    },
+    "003": {
+      "task": "break smartphone"
+    },
+    "004": {
+      "task": "sell fish"
+    },
+    "005": {
+      "task": "make big fire"
+    },
+    "006": {
+      "task": "write a poem"
+    },
+    "007": {
+      "task": "wake up president"
     }
+  },
+  "comments": {
+    "id": 1,
+    "body": "some comment",
+    "postId": 1
+  }
 }
