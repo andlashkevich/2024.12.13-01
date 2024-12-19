@@ -7,8 +7,12 @@ export function Task2() {
 	const [inTask, setInTask] = useState("");
 	const [outTask, setOutTask] = useState([]);
 	const [error, setError] = useState(null);
-	const [block, setBlock] = useState(false);
 	const [id, setId] = useState("");
+	const [refresh, setRefresh] = useState(false);
+	const setClear = () => {
+		setInTask("");
+		setError(null);
+	};
 
 	const inputChange = ({ target }) => {
 		let error = null;
@@ -18,21 +22,16 @@ export function Task2() {
 		if (target.value.length > 100) error = "Слишком длинная задача";
 		setError(error);
 	};
-	const setClear = () => {
-		setInTask("");
-		setBlock(false);
-		setError(null);
-	};
+
 	useEffect(() => {
 		fetch("http://localhost:3003/tasks")
 			.then((rsp) => rsp.json())
 			.then((dt) => {
 				setOutTask(dt);
 			});
-	}, [block, inTask]);
+	}, [inTask, refresh]);
 
 	const createTask = () => {
-		setBlock(true);
 		fetch("http://localhost:3003/tasks", {
 			method: "POST",
 			headers: { "Content-Type": "application/json; charset=utf-8" },
@@ -41,10 +40,7 @@ export function Task2() {
 			.then((rsp) => rsp.json())
 			.then((dt) => console.log(dt))
 			.catch((error) => console.log(error))
-			.finally(() => {
-				setInTask("");
-				setBlock(false);
-			});
+			.finally(() => setClear());
 	};
 
 	const delTask = (e) => {
@@ -55,6 +51,7 @@ export function Task2() {
 		fetch(`http://localhost:3003/tasks/${id}`, {
 			method: "DELETE",
 		});
+		setRefresh(!refresh);
 	};
 
 	const sortTask = (e) => {
@@ -86,10 +83,7 @@ export function Task2() {
 			.then((rsp) => rsp.json())
 			.then((dt) => console.log(dt))
 			.catch((error) => console.log(error))
-			.finally(() => {
-				setInTask("");
-				setBlock(false);
-			});
+			.finally(() => setClear());
 	};
 
 	const findTask = () => {
@@ -99,6 +93,24 @@ export function Task2() {
 			? setOutTask(a)
 			: setError("Поиск не дал результатов");
 	};
+
+	// Если я правильно понял debounce , то его код с findTask указан ниже на замену текущей функции findTask, которая ничего на сервере не ищет, а перебирает существующие на странице элементы и не нуждается во временных задержках и в целом проще.
+
+	// const debounce = (f, timeout) => {
+	// 	let id = null;
+	// 	return (...arg) => {
+	// 		clearTimeout(id);
+	// 		id = setTimeout(() => f(...arg), timeout);
+	// 	};
+	// };
+	// const fTask = () => {
+	// 	fetch("http://localhost:3003/tasks")
+	// 		.then((rsp) => rsp.json())
+	// 		.then((dt) => {
+	// 			setOutTask(dt.filter((it) => it.task.includes(inTask)));
+	// 		});
+	// };
+	// const findTask = debounce(fTask, 3000);
 
 	return (
 		<div className={styles.wrap}>
@@ -110,7 +122,7 @@ export function Task2() {
 					value={inTask}
 					onChange={inputChange}
 					className={styles.input}
-					placeholder="1.Введите новую задачу или словосочетание для поиска существующей. 2.Для исправления имеющейся задачи нажмите на неё и внесите изменение в этом поле. 3.Ввод пустого значения или задачи длинной более 100 знаков неприемлем. 4.Если задача уже есть в списке, ввести её еще раз не получится."
+					placeholder="1.Введите новую задачу  или  словосочетание  для  поиска существующей. 2.Для исправления имеющейся задачи нажмите на неё и внесите желаемое изменение в этом поле. 3.Ввод пустого значения или задачи длиной более 100 знаков неприемлем. 4.Если задача уже есть в списке, ввести её еще раз не получится."
 					autoFocus={true}
 					autoComplete="on"
 				></textarea>
@@ -120,28 +132,28 @@ export function Task2() {
 			</div>
 			<div className={styles.buttons}>
 				<button
-					disabled={block}
+					disabled={!inTask || error}
 					className={styles.сButton}
 					onClick={createTask}
 				>
 					Добавить
 				</button>
 				<button
-					disabled={block}
+					disabled={!outTask}
 					onClick={sortTask}
 					className={styles.sButton}
 				>
 					Упорядочить
 				</button>
 				<button
-					disabled={block}
+					disabled={!inTask || error}
 					onClick={findTask}
 					className={styles.fButton}
 				>
 					Найти
 				</button>
 				<button
-					disabled={block}
+					disabled={!inTask || error}
 					onClick={updTask}
 					className={styles.uButton}
 				>
@@ -156,7 +168,7 @@ export function Task2() {
 								{it.task}
 							</li>
 							<button
-								disabled={block}
+								// disabled={block}
 								onClick={delTask}
 								className={styles.del}
 							>

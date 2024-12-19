@@ -1,48 +1,36 @@
 {
   "tasks": [
     {
-      "task": "MEET ANDREY",
-      "id": "3"
+      "task": "BUY MILK",
+      "id": 1
     },
     {
-      "task": "WORKING EVERYDAY",
-      "id": "yVVjsLE"
+      "task": "GO TRAVELLING",
+      "id": 2
     },
     {
-      "task": "SWIMMING FAST",
-      "id": "QmGlt9I"
+      "task": "KILL SOMEBODY",
+      "id": 3
     },
     {
-      "task": "ORANIZING MEETING",
-      "id": "qNK0NTG"
+      "task": "SELL MANY FISH",
+      "id": 6
     },
     {
-      "task": "BE HAPPY",
-      "id": "EZbEH8P"
+      "task": "MAKE BIG FIRE",
+      "id": 7
     },
     {
-      "task": "CHANGE YOUR LIFE",
-      "id": "YdyDxeo"
+      "task": "WAKE UP PRESIDENT",
+      "id": 8
     },
     {
-      "task": "RUNNING AT MORNING",
-      "id": "_muFUkP"
+      "task": "PLAY CHESS",
+      "id": 9
     },
     {
-      "task": "TRAVELLING START",
-      "id": "esz1jqf"
-    },
-    {
-      "task": "AMAZING NIGHT",
-      "id": "PpFryPo"
-    },
-    {
-      "task": "GO HOME",
-      "id": "FQTFtX7"
-    },
-    {
-      "task": "BUY AIRPLANE",
-      "id": "OkhQGi4"
+      "task": "WRITE A POEM",
+      "id": 10
     }
   ],
   "comments": [
