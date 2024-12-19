@@ -1,47 +1,54 @@
 {
   "tasks": [
     {
-      "task": "BUY MILK",
+      "task": "НАЙТИ КЛАД",
       "id": 1
     },
     {
-      "task": "GO TRAVELLING",
+      "task": "СЛЕТАТЬ В КОСМОС",
       "id": 2
     },
     {
-      "task": "KILL SOMEBODY",
+      "task": "ОСНОВАТЬ ГОРОД",
       "id": 3
     },
     {
-      "task": "SELL MANY FISH",
+      "task": "ВЫПИТЬ МОРЕ",
       "id": 6
     },
     {
-      "task": "MAKE BIG FIRE",
+      "task": "ОБЪЯВИТЬ ВОЙНУ",
       "id": 7
     },
     {
-      "task": "WAKE UP PRESIDENT",
+      "task": "ПОБЫВАТЬ В БУДУЩЕМ",
       "id": 8
     },
     {
-      "task": "PLAY CHESS",
+      "task": "НАУЧИТЬСЯ ЛЕТАТЬ",
       "id": 9
     },
     {
-      "task": "WRITE A POEM",
+      "task": "ЗАДУШИТЬ ЗЕЛЕНСКОГО",
       "id": 10
     },
     {
-      "task": "MEET ANDREY",
+      "task": "ПОСОРИТЬСЯ СО ВСЕМИ",
       "id": 11
     }
   ],
-  "comments": [
-    {
+  "firebaseTasks": {
+	"001":{"task": "buy milk"},
+	"002":{"task": "catch pig"},
+	"003":{"task": "break smartphone"},
+	"004":{"task": "sell fish"},
+	"005":{"task": "make big fire"},
+	"006":{"task": "write a poem"},
+	"007":{"task": "wake up president"}
+  },
+   "comments":  {
       "id": 1,
       "body": "some comment",
       "postId": 1
     }
-  ]
 }

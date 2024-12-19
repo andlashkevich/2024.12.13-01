@@ -18,7 +18,7 @@ export function Task1() {
 
 	return (
 		<form className={styles.wrap}>
-			<h1 className={styles.head}> Задачи на год</h1>
+			<h1 className={styles.head}> Задачи на год (JSONplaceholder)</h1>
 			<h3 className={styles.date}>{d}</h3>
 			<ul type={"circle"} className={styles.ul}>
 				{tD.map((it, id) => {
