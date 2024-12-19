@@ -146,7 +146,7 @@ export function Task2() {
 					Упорядочить
 				</button>
 				<button
-					disabled={!inTask || error}
+					disabled={!inTask}
 					onClick={findTask}
 					className={styles.fButton}
 				>
@@ -168,7 +168,7 @@ export function Task2() {
 								{it.task}
 							</li>
 							<button
-								// disabled={block}
+								// disabled={}
 								onClick={delTask}
 								className={styles.del}
 							>

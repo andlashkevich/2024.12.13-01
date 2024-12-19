@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 
 export function Task1() {
 	const [tD, setTd] = useState([]);
-	// const [isLoad, setIsload] = useState(false);
 	let d = new Intl.DateTimeFormat("ru", { dateStyle: "full" }).format(
 		new Date(),
 	);
@@ -15,7 +14,6 @@ export function Task1() {
 			.then((toDo) => {
 				setTd(toDo);
 			});
-		// .finally(() => setIsload(false));
 	}, []);
 
 	return (
