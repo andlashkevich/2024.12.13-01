@@ -1,0 +1,377 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./app/page.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+
+ .page_container__jZF7q{
+	margin: 0px;
+	width: 100%;
+	height: 2100px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+ }
+
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./components/task1/task1.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+
+ .task1_wrap__wGNLM {
+	width: 52%;
+	display: flex;
+	flex-direction: column;
+	margin: 0px;
+	margin-left: 20px;
+	padding: 10px;
+ }
+ .task1_head__WAcLr {
+	text-align: center;
+ }
+ .task1_date__A0RKG{
+	text-align: center;
+ }
+  .task1_ul__q2u98 {
+	margin-right: 30px;
+	margin-left: 35px;
+	margin-top: 35px;
+	margin-bottom: 10px;
+	padding: 7px;
+	/* width: 77%; */
+	/* border-color:blue;
+	border-width: 7px; */
+
+  }
+  .task1_uncheck__cn2Jq {
+	background-color: rgb(116, 237, 116);
+	font-size: 24px;
+	margin: 10px;
+	min-height: 10px;
+	border-radius: 15px;
+	padding: 15px;
+  }
+  .task1_checked__dDtzt {
+	background-color: rgb(238, 98, 98);
+	font-size: 22px;
+	text-decoration: line-through;
+	margin: 10px;
+	min-height: 10px;
+	border-radius: 15px;
+	padding: 15px;
+  }
+
+
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./components/task2/task2.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+
+.task2_wrap__G5hHs {
+	width: 35%;
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	margin: 0px;
+	padding: 10px;
+
+ }
+ .task2_head__kDko7 {
+	text-align: center;
+	font-size: 24px;
+	width: 100%;
+	margin: 10px;
+	padding: 10px;
+
+ }
+ .task2_field___BYq9 {
+	display: inline;
+	position: relative;
+ }
+ .task2_input__XsLVn {
+	display: grid;
+	grid-area: 1/1;
+	text-align: center;
+	font-size: 17px;
+	font-weight: bold;
+	width: 100%;
+	height: 160px;
+	margin: 10px;
+	padding: 10px;
+	padding-right: 20px;
+	color: black;
+	background-color: rgb(116, 237, 116);
+	border-color: rgb(238, 98, 98);
+	border-width: 2px;
+	border-radius: 15px;
+}
+/* .input::placeholder {
+	color: white;
+  } */
+.task2_xBut__oDJDV{
+	display: grid;
+	grid-area: 1/1;
+	margin-top: 15px;
+	margin-right: -35px;
+	position: absolute;
+	font-size: 15px;
+	font-weight: bold;
+	border-radius: 50%;
+	border-color:rgb(238, 98, 98);
+	color: rgb(238, 98, 98);
+    top: 0;
+    right: 0;
+}
+.task2_error___vryW {
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color:rgb(238, 98, 98);
+}
+.task2_tasks__jeZFu {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	/* border-width: 2px;
+	border-color: rgb(116, 237, 116); */
+}
+.task2_del__X0nx9 {
+	background-color: rgb(238, 98, 98);
+	width: 100px;
+	font-size: 17px;
+	margin: 10px;
+	min-height: 10px;
+	border-width: 2px;
+	border-color:rgb(116, 237, 116);
+	border-radius: 15px;
+	padding: 15px;
+}
+ .task2_buttons__0JzMk {
+	display: flex;
+	justify-content: center;
+	padding: 15px;
+	text-align: center;
+	width: 100%;
+	padding: 7px;
+
+ }
+ .task2__Button__ZV9Te {
+	background-color: rgb(238, 98, 98);
+	width: 24%;
+	font-size: 15px;
+	/* font-weight: bolder; */
+	margin: 10px;
+	min-height: 10px;
+	border-width: 2px;
+	border-color:rgb(116, 237, 116);
+	border-radius: 15px;
+	padding: 15px;
+ }
+ .task2_sButton__rQoCC {
+	background-color: rgb(238, 98, 98);
+	width: 24%;
+	font-size: 15px;
+	margin: 10px;
+	min-height: 10px;
+	border-width: 2px;
+	border-color:rgb(116, 237, 116);
+	border-radius: 15px;
+	padding: 15px;
+ }
+ .task2_fButton__X9zrU {
+	background-color: rgb(238, 98, 98);
+	width: 24%;
+	font-size: 15px;
+	margin: 10px;
+	min-height: 10px;
+	border-width: 2px;
+	border-color:rgb(116, 237, 116);
+	border-radius: 15px;
+	padding: 15px;
+ }
+ .task2_uButton__QUCK5 {
+	background-color: rgb(238, 98, 98);
+	width: 24%;
+	font-size: 15px;
+	margin: 10px;
+	min-height: 10px;
+	border-width: 2px;
+	border-color:rgb(116, 237, 116);
+	border-radius: 15px;
+	padding: 15px;
+}
+  .task2_ol__00nJM {
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 35px;
+	margin-bottom: 10px;
+	padding: 15px;
+
+  }
+  .task2_uncheck__r3UF6 {
+	text-align: center;
+	background-color: rgb(116, 237, 116);
+	font-size: 17px;
+	margin: 7px;
+	min-height: 10px;
+	border-radius: 15px;
+	/* border-width: 2px;
+	border-color: rgb(238, 98, 98); */
+	padding: 15px;
+	width: 450px;
+  }
+
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./components/task3/task3.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+
+.task3_wrap__X2EAs {
+	width: 35%;
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	margin: 0px;
+	padding: 10px;
+
+ }
+ .task3_head__8QPlQ {
+	text-align: center;
+	font-size: 24px;
+	width: 100%;
+	margin: 10px;
+	padding: 10px;
+
+ }
+ .task3_field__SNnNo {
+	display: inline;
+	position: relative;
+ }
+ .task3_input__aBoSz {
+	display: grid;
+	grid-area: 1/1;
+	text-align: center;
+	font-size: 17px;
+	font-weight: bold;
+	width: 100%;
+	height: 160px;
+	margin: 10px;
+	padding: 10px;
+	padding-right: 20px;
+	color: black;
+	background-color: rgb(116, 237, 116);
+	border-color: rgb(238, 98, 98);
+	border-width: 2px;
+	border-radius: 15px;
+}
+/* .input::placeholder {
+	color: white;
+  } */
+.task3_xBut__bpcrE{
+	display: grid;
+	grid-area: 1/1;
+	margin-top: 15px;
+	margin-right: -35px;
+	position: absolute;
+	font-size: 15px;
+	font-weight: bold;
+	border-radius: 50%;
+	border-color:rgb(238, 98, 98);
+	color: rgb(238, 98, 98);
+    top: 0;
+    right: 0;
+}
+.task3_error__t_ful {
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color:rgb(238, 98, 98);
+}
+.task3_tasks__ewf8_ {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	/* border-width: 2px;
+	border-color: rgb(116, 237, 116); */
+}
+.task3_del__rwgkm {
+	background-color: rgb(238, 98, 98);
+	width: 100px;
+	font-size: 17px;
+	margin: 10px;
+	min-height: 10px;
+	border-width: 2px;
+	border-color:rgb(116, 237, 116);
+	border-radius: 15px;
+	padding: 15px;
+}
+ .task3_buttons__4mZwF {
+	display: flex;
+	justify-content: center;
+	padding: 15px;
+	text-align: center;
+	width: 100%;
+	padding: 7px;
+
+ }
+ .task3__Button__1DYwB {
+	background-color: rgb(238, 98, 98);
+	width: 24%;
+	font-size: 15px;
+	/* font-weight: bolder; */
+	margin: 10px;
+	min-height: 10px;
+	border-width: 2px;
+	border-color:rgb(116, 237, 116);
+	border-radius: 15px;
+	padding: 15px;
+ }
+ .task3_sButton__lpZ7i {
+	background-color: rgb(238, 98, 98);
+	width: 24%;
+	font-size: 15px;
+	margin: 10px;
+	min-height: 10px;
+	border-width: 2px;
+	border-color:rgb(116, 237, 116);
+	border-radius: 15px;
+	padding: 15px;
+ }
+ .task3_fButton__MJopL {
+	background-color: rgb(238, 98, 98);
+	width: 24%;
+	font-size: 15px;
+	margin: 10px;
+	min-height: 10px;
+	border-width: 2px;
+	border-color:rgb(116, 237, 116);
+	border-radius: 15px;
+	padding: 15px;
+ }
+ .task3_uButton__O3oht {
+	background-color: rgb(238, 98, 98);
+	width: 24%;
+	font-size: 15px;
+	margin: 10px;
+	min-height: 10px;
+	border-width: 2px;
+	border-color:rgb(116, 237, 116);
+	border-radius: 15px;
+	padding: 15px;
+}
+  .task3_ol__dJJFW {
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 35px;
+	margin-bottom: 10px;
+	padding: 15px;
+
+  }
+  .task3_uncheck__7qmjX {
+	text-align: center;
+	background-color: rgb(116, 237, 116);
+	font-size: 17px;
+	margin: 7px;
+	min-height: 10px;
+	border-radius: 15px;
+	/* border-width: 2px;
+	border-color: rgb(238, 98, 98); */
+	padding: 15px;
+	width: 450px;
+  }
+
